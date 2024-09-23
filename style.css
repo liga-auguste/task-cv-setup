@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  font-family: Lato, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Playfair Display, serif;
+}
+
+.header {
+  text-align: center;
+  background-color: lavender;
+  padding: 48px 16px;
+}
+
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 16px;
+}
