@@ -27,3 +27,32 @@ h3 {
   margin: 0 auto;
   padding: 16px;
 }
+
+article {
+  padding: 10px;
+}
+
+header a {
+  padding: 5px;
+  color: darkslateblue;
+}
+
+a:link {
+  background-color: transparent;
+}
+
+a:visited {
+  color: darkmagenta;
+}
+
+a:hover {
+  background-color: rgb(226, 215, 226);
+}
+
+a:active {
+  background-color: lightsteelblue;
+}
+
+article + article {
+  border-top: 2px solid LightGray;
+}
