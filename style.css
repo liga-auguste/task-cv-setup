@@ -56,3 +56,12 @@ a:active {
 article + article {
   border-top: 2px solid LightGray;
 }
+
+::selection {
+  background-color: rgb(79, 79, 148);
+  color: whitesmoke;
+}
+
+.header p::after {
+  content: " 🧘‍♀️";
+}
