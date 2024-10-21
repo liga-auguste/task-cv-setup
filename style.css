@@ -28,6 +28,11 @@ h3 {
   padding: 16px;
 }
 
+main article {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 article {
   padding: 10px;
 }
@@ -72,4 +77,21 @@ article + article {
 
 .experience-subheading {
   display: inline-block;
+}
+
+.article-heading {
+  position: relative;
+  left: -30px;
+}
+
+.hire-me {
+  font-family: Playfair Display, serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: rgb(226, 215, 226);
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 5px;
 }
