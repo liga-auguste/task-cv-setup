@@ -30,7 +30,7 @@ h3 {
 }
 
 main article {
-  padding-left: 1rem;
+  padding-left: 0.5 rem;
   padding-right: 1rem;
 }
 
@@ -70,6 +70,17 @@ article + article {
 
 .header p::after {
   content: " 🧘‍♀️";
+}
+
+.header div {
+  font-size: 3.3rem;
+}
+
+.name {
+  font-size: 1em;
+}
+.occupation {
+  font-size: 0.25em;
 }
 
 .experience-heading {
