@@ -1,14 +1,15 @@
+/* GENERAL STYLINGS */
+
 * {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
+html {
+  font-family: Lato, sans-serif;
 }
 
-html {
-  font-size: 16px;
-  font-family: Lato, sans-serif;
+body {
+  margin: 0;
 }
 
 h1,
@@ -17,18 +18,7 @@ h3 {
   font-family: Playfair Display, serif;
 }
 
-.header {
-  text-align: center;
-  background-color: lavender;
-  padding: 3rem 1rem;
-}
-
-.main {
-  max-width: 50%;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
+/* LAYOUT */
 main article {
   padding-left: 0.5 rem;
   padding-right: 1rem;
@@ -59,6 +49,7 @@ a:active {
   background-color: lightsteelblue;
 }
 
+
 article + article {
   border-top: 2px solid LightGray;
 }
@@ -68,19 +59,36 @@ article + article {
   color: whitesmoke;
 }
 
+/* SPECIFIC STYLINGS */
+.header {
+  text-align: center;
+  background-color: lavender;
+  padding: 3rem 1rem;
+}
+
+.main {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
 .header p::after {
   content: " 🧘‍♀️";
 }
 
-.header div {
+.name-header {
   font-size: 3.3rem;
 }
 
 .name {
   font-size: 1em;
+  margin-bottom: 0;
 }
+
 .occupation {
   font-size: 0.25em;
+margin-top: 0;
+margin-bottom: 2rem;
 }
 
 .experience-heading {
@@ -100,10 +108,13 @@ article + article {
   font-family: Playfair Display, serif;
   font-size: 1.5rem;
   font-weight: bold;
+
   background-color: rgb(226, 215, 226);
+
   padding: 0.4rem;
+  border-radius: 0.4rem;
+
   position: absolute;
   top: 1rem;
   right: 1rem;
-  border-radius: 0.4rem;
 }
