@@ -118,3 +118,66 @@ margin-bottom: 2rem;
   top: 1rem;
   right: 1rem;
 }
+
+/* MEDIA QUERIES */
+
+/* print hide */
+@media print {
+  .nav, .hire-me {
+    display: none;
+  }
+}
+
+/* small screen */
+@media screen and (max-width: 785px) {
+  .nav a {
+    display: block;
+    text-align: center;
+  }
+  
+  body {
+    font-size: .8rem;
+  }
+
+  .main {
+    max-width: 85%;
+  }
+
+  .article-heading {
+    position: static;
+  }
+
+  .spacing-span {
+    display: none;
+  }
+}
+/* medium screen*/
+@media screen and (min-width: 786px) {
+  body {
+  font-size: 1rem;
+}
+
+  .main > * + * {
+  margin-top: 3rem;
+  max-width: 75%;
+  }
+}
+
+/* large screen*/
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  .hire-me {
+    position: fixed;
+    font-size: 1.5em;
+  }
+
+  .main > * + * {
+    margin-top: 4rem;
+  }
+
+}
+
+
