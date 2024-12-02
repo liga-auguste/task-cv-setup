@@ -8,6 +8,12 @@ html {
   font-family: Lato, sans-serif;
 }
 
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 body {
   margin: 0;
 }
@@ -91,12 +97,18 @@ margin-top: 0;
 margin-bottom: 2rem;
 }
 
+.cont-flex {
+display: flex;
+flex-direction: column;
+
+
+}
 .experience-heading {
-  display: inline-block;
+  display: block;
 }
 
 .experience-subheading {
-  display: inline-block;
+  display: block;
 }
 
 .article-heading {
@@ -156,12 +168,25 @@ margin-bottom: 2rem;
   body {
   font-size: 1rem;
 }
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cont-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+}
 
   .main > * + * {
   margin-top: 3rem;
   max-width: 75%;
   }
-}
+
 
 /* large screen*/
 @media screen and (min-width: 1200px) {
@@ -178,6 +203,12 @@ margin-bottom: 2rem;
     margin-top: 4rem;
   }
 
+  .cont-flex {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+  }
 }
 
 
