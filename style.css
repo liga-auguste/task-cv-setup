@@ -1,5 +1,18 @@
 /* GENERAL STYLINGS */
 
+:root {
+  --main-color: black;
+  --bcg-color: white;
+  --accent-color1: lavender;
+  --accent-color2: white;
+  --bcg-sel-color: rgb(79, 79, 148);
+  --link-active: lightsteelblue;
+  --link-visited: dimgray;
+  --page-background-color: white;
+  --page-text-color: black;
+
+}
+
 * {
   box-sizing: border-box;
 }
@@ -29,7 +42,11 @@ footer {
   padding: 1rem;
   text-align: center;
 
-  background-image: linear-gradient(235deg, lavender, white);
+  background-image: linear-gradient(
+    235deg,
+    var(--accent-color1),
+    var(--accent-color2)
+  );
 }
 
 /* LAYOUT */
@@ -44,7 +61,7 @@ article {
 
 header a {
   padding: 0.4rem;
-  color: darkslateblue;
+  color: var(--main-color);
 }
 
 a:link {
@@ -52,31 +69,34 @@ a:link {
 }
 
 a:visited {
-  color: darkmagenta;
+  color: var(--link-visited);
 }
 
 a:hover {
-  background-color: rgb(226, 215, 226);
+  background-color: var(--accent-color1);
 }
 
 a:active {
-  background-color: lightsteelblue;
+  background-color: var(--link-active);
 }
 
-
 article + article {
-  border-top: 2px solid lavender;
+  border-top: 2px solid var(--accent-color1);
 }
 
 ::selection {
-  background-color: rgb(79, 79, 148);
-  color: whitesmoke;
+  background-color: var(--bcg-sel-color);
+  color: var(--accent-color2);
 }
 
 /* SPECIFIC STYLINGS */
 .header {
   text-align: center;
-  background-image: linear-gradient(235deg, white, lavender);
+  background-image: linear-gradient(
+    235deg,
+    var(--accent-color2),
+    var(--accent-color1)
+  );
   padding: 3rem 1rem;
 }
 
@@ -101,15 +121,13 @@ article + article {
 
 .occupation {
   font-size: 0.25em;
-margin-top: 0;
-margin-bottom: 2rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
 }
 
 .cont-flex {
-display: flex;
-flex-direction: column;
-
-
+  display: flex;
+  flex-direction: column;
 }
 .experience-heading {
   display: block;
@@ -129,7 +147,7 @@ flex-direction: column;
   font-size: 1.5rem;
   font-weight: bold;
 
-  background-color: rgb(226, 215, 226);
+  background-color: var(--accent-color1);
 
   padding: 0.4rem;
   border-radius: 0.4rem;
@@ -143,8 +161,17 @@ flex-direction: column;
 
 /* print hide */
 @media print {
-  .nav, .hire-me {
+  .nav,
+  .hire-me {
     display: none;
+  }
+}
+
+/* dark mode*/
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    --page-background-color: black;
+    --page-text-color: white;
   }
 }
 
@@ -154,9 +181,9 @@ flex-direction: column;
     display: block;
     text-align: center;
   }
-  
+
   body {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   .main {
@@ -174,27 +201,26 @@ flex-direction: column;
 /* medium screen*/
 @media screen and (min-width: 786px) {
   body {
-  font-size: 1rem;
-}
-.nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
+    font-size: 1rem;
+  }
+  .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 
-.cont-flex {
+  .cont-flex {
     display: flex;
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
-}
+  }
 }
 
-  .main > * + * {
+.main > * + * {
   margin-top: 3rem;
   max-width: 75%;
-  }
-
+}
 
 /* large screen*/
 @media screen and (min-width: 1200px) {
@@ -212,11 +238,9 @@ flex-direction: column;
   }
 
   .cont-flex {
-      display: flex;
-      flex-direction: row;
-      align-items: baseline;
-      justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
   }
 }
-
-
