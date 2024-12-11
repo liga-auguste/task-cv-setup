@@ -235,6 +235,13 @@ article + article {
     align-items: baseline;
     justify-content: space-between;
   }
+
+  .main-article {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+  }
+
+  }
 }
 
 .main > * + * {
